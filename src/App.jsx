@@ -1,9 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
+import { GlobalStyles } from "./styles/GlobalStyles";
+import Header from "./components/header/Header";
+import { ContextProvider } from "./Context/ContextMenu";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <ContextProvider>
+        <Header />
+      </ContextProvider>
+
+      <GlobalStyles />
+    </>
+  );
 }
 
 export default App;
